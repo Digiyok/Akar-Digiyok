@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateTabelReportAttitudeScore extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('report_attitude_score', function (Blueprint $table) {
+            $table->id();
+            $table->integer('score_id');
+            $table->integer('ras_type_id');
+            $table->integer('rpd_id');
+            $table->char('predicate', 50);
+            $table->text('description');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('report_attitude_score');
+    }
+}
