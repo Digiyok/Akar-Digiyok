@@ -495,11 +495,13 @@ Route::group(['middleware' => 'auth'], function () {
       Route::get('/', [AktivitasController::class, 'index'])->name('.index');
       Route::get('create', [AktivitasController::class, 'create'])->name('.create');
       Route::post('store', [AktivitasController::class, 'store'])->name('.store');
-      Route::get('{id}', [AktivitasController::class, 'show'])->where('id', '[0-9]+')->name('.show');
-      Route::get('{id}/edit', [AktivitasController::class, 'edit'])->where('id', '[0-9]+')->name('.edit');
+      Route::post('edit', [AktivitasController::class, 'edit'])->name('.edit');
       Route::put('update', [AktivitasController::class, 'update'])->name('.update');
-      Route::put('publish', [AktivitasController::class, 'publish'])->name('.publish');
       Route::delete('{id}/destroy', [AktivitasController::class, 'destroy'])->where('id', '[0-9]+')->name('.destroy');
+      Route::post('show', [AktivitasController::class, 'show'])->name('.show');
+      Route::put('on-going', [AktivitasController::class, 'ongoing'])->name('.ongoing');
+      Route::post('edit-finish', [AktivitasController::class, 'editFinish'])->name('.edit-finish');
+      Route::put('finish', [AktivitasController::class, 'finish'])->name('.finish');
     });
 
     // psc

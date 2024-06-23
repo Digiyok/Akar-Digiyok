@@ -1,6 +1,6 @@
 <script>
-  function editModal(route, id, modal = null) {
-    var modalId = '#edit-form';
+  function finishModal(route, id, modal = null) {
+    var modalId = '#finish-form';
     if (modal) modalId = modal;
 
     $(modalId + ' .modal-load').show();

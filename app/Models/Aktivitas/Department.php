@@ -17,4 +17,9 @@ class Department extends Model
   {
     return $this->hasMany(DepartmentPosition::class, 'department_id');
   }
+
+  function activites()
+  {
+    return $this->hasMany(Activities::class, 'department_id');
+  }
 }

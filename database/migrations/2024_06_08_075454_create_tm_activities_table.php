@@ -19,9 +19,10 @@ class CreateTmActivitiesTable extends Migration
       $table->string('desc')->nullable();
       $table->string('image')->nullable();
       $table->date('start_date');
-      $table->date('start_end')->nullable();
+      $table->date('end_date')->nullable();
       $table->tinyInteger('status_id');
       $table->integer('department_id');
+      $table->bigInteger('employe_id');
       $table->timestamps();
     });
   }

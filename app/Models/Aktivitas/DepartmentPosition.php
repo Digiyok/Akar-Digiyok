@@ -6,7 +6,7 @@ use App\Models\Penempatan\Jabatan;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-use Jenssegers\Date\Date;
+
 
 class DepartmentPosition extends Model
 {
@@ -21,6 +21,6 @@ class DepartmentPosition extends Model
 
   function position()
   {
-    return $this->belongsTo('app\Models\Penempatan\Jabatan.php', 'position_id');
+    return $this->belongsTo(Jabatan::class, 'position_id');
   }
 }

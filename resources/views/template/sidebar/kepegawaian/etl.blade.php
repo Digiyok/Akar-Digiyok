@@ -131,6 +131,7 @@
       <span>Putus Hubungan Kerja</span>
     </a>
   </li>
+  @include('template.sidebar.kepegawaian.aktifitas-pegawai')
   <hr class="sidebar-divider">
   @include('template.sidebar.kepegawaian.penilaian_kinerja')
 @endsection
